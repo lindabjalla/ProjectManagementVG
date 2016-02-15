@@ -97,7 +97,7 @@ public class WorkItemService extends AbstractService<WorkItem, WorkItemRepositor
 		try
 		{
 			startDateInDateFormat = new SimpleDateFormat("yyyy-MM-dd").parse(startDate);
-			endDateInDateFormat = new SimpleDateFormat("yyyy-MM-dd").parse(endDate);
+			endDateInDateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss").parse(endDate + "T23:59:59");
 		}
 		catch (ParseException e)
 		{
