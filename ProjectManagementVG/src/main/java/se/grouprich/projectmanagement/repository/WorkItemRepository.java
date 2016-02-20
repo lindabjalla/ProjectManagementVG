@@ -29,5 +29,4 @@ public interface WorkItemRepository extends PagingAndSortingRepository<WorkItem,
 	@Query("SELECT w FROM #{#entityName} w WHERE w.status = se.grouprich.projectmanagement.status.WorkItemStatus.DONE AND w.lastModifiedDate "
 			+ "BETWEEN ?1 AND ?2 ORDER BY w.lastModifiedDate DESC")
 	List<WorkItem> findFinishedWorkItemsBetweenStartDateAndEndDate(Date startDate, Date endDate);
-	
 }
