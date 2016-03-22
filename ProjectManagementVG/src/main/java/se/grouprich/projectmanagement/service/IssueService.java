@@ -20,6 +20,7 @@ import se.grouprich.projectmanagement.status.WorkItemStatus;
 public class IssueService extends AbstractService<Issue, IssueRepository>
 {
 	private WorkItemRepository workItemRepository;
+	
 	@Autowired
 	IssueService(final IssueRepository superRepository, final WorkItemRepository workItemRepository)
 	{

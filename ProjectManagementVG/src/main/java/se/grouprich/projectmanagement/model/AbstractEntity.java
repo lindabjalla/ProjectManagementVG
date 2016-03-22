@@ -20,10 +20,10 @@ public abstract class AbstractEntity
 {
 	@Id
 	@GeneratedValue
-	Long id;
+	private Long id;
 
 	@Column(nullable = false, unique = true)
-	Long controlNumber;
+	private Long controlNumber;
 	
 	@Column(name = "createdBy")
 	@CreatedBy

@@ -81,7 +81,7 @@ public class Team extends AbstractEntity
 		if (other instanceof Team)
 		{
 			Team otherTeam = (Team) other;
-			return controlNumber.equals(otherTeam.controlNumber) && name.equals(otherTeam.name) && status.equals(otherTeam.status);
+			return getControlNumber().equals(otherTeam.getControlNumber()) && name.equals(otherTeam.name) && status.equals(otherTeam.status);
 		}
 		return false;
 	}
@@ -90,7 +90,7 @@ public class Team extends AbstractEntity
 	public int hashCode()
 	{
 		int result = 1;
-		result += controlNumber.hashCode() * 37;
+		result += getControlNumber().hashCode() * 37;
 		result += name.hashCode() * 37;
 		result += status.hashCode() * 37;
 
@@ -100,6 +100,6 @@ public class Team extends AbstractEntity
 	@Override
 	public String toString()
 	{
-		return "Team [id=" + id + ", controlNumber=" + controlNumber + ", name=" + name + ", status=" + status + "]";
+		return "Team [id=" + getId() + ", controlNumber=" + getControlNumber() + ", name=" + name + ", status=" + status + "]";
 	}
 }
