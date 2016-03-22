@@ -71,6 +71,7 @@ public final class Main
 			List<WorkItem> finishedWorkItems = workItemService.findFinishedWorkItemsBetweenStartDateAndEndDate("2016-02-13", "2016-02-15");
 			System.out.println("---finishedWorkItems---");
 			finishedWorkItems.forEach(System.out::println);
+			//update
 		}
 	}
 }
